@@ -4,8 +4,9 @@ fun main() {
     p1.nickName = "James"
 
     var infoProvider = BasicInfoProvider()
-    infoProvider.printInfo(p1)
     infoProvider.printSession()
+    infoProvider.printInfo(p1)
+
 
 
 }
