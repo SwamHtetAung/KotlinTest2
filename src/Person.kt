@@ -6,3 +6,7 @@ class Person (val firstName: String = "Peter", val lastName: String = "Parker"){
         println("$firstName ($nickNameToDisplay) $lastName")
     }
 }
+
+
+
+// 2 => [variable] nickName, [method] display
