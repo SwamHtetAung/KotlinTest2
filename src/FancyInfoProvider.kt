@@ -4,7 +4,6 @@ class FancyInfoProvider : BasicInfoProvider() {
 
     override fun printInfo(p1: Person) {
         super.printInfo(p1)
-        println("xxxxxxxxxx")
         println("Fancy Info")
     }
 
