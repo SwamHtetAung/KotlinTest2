@@ -13,4 +13,3 @@ class FancyInfoProvider : BasicInfoProvider() {
 
 }
 
-//class extended a class (Car -> BasicInfoProvider)
