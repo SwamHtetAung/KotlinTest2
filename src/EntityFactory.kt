@@ -1,12 +1,25 @@
-class Entity private constructor(val id : String){
-    companion object{
-        const val id = "id"
-        fun create() = Entity(id)
+import java.util.*
 
+object EntityFactory {
+    fun create() = Entity(UUID.randomUUID(), "balls")
+}
+
+class Entity (val id : UUID, val name : String){
+    override fun toString(): String {
+        return ("id:$id \nname:$name")
     }
 }
 
+enum class Months{
+    January,
+    February,
+    March
+}
+
 fun main() {
-    val entity = Entity.create()
-    println(entity.id)
+    val entity = EntityFactory.create()
+    println(entity)
+
+    val month = Months.January.toString()
+    println(month)
 }
