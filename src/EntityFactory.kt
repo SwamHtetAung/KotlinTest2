@@ -47,5 +47,4 @@ fun main() {
         is Entity.Hard -> "Hard"
     }
     println(msg)
-
 }
