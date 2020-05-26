@@ -1,18 +1,21 @@
 import java.util.*
 
 enum class EntitiyType{
-    Easy,
-    Medium,
-    Hard
+    easy,
+    medium,
+    hard;
+
+    fun getUppedName() = name.toUpperCase()
+    fun getCapitalName() = name.capitalize()
 }
 
 object EntityFactory {
     fun create(type : EntitiyType) : Entity{
         var id = UUID.randomUUID().toString()
         val name = when(type){
-            EntitiyType.Easy -> "Easy"
-            EntitiyType.Medium -> "Medium"
-            EntitiyType.Hard -> "Hard"
+            EntitiyType.easy -> type.name
+            EntitiyType.medium -> type.getUppedName()
+            EntitiyType.hard -> type.getCapitalName()
         }
         return Entity(id, name)
     }
@@ -26,10 +29,13 @@ class Entity (val id : String, val name : String){
 
 
 fun main() {
-    val EasyEntity = EntityFactory.create(EntitiyType.Easy)
+    val EasyEntity = EntityFactory.create(EntitiyType.easy)
     println(EasyEntity)
 
-    val MediumEntity = EntityFactory.create(EntitiyType.Medium)
+    val MediumEntity = EntityFactory.create(EntitiyType.medium)
     println(MediumEntity)
+
+    val HardEntity = EntityFactory.create(EntitiyType.hard)
+    println(HardEntity)
 
 }
